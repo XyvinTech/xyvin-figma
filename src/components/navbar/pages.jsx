@@ -25,7 +25,7 @@ const pages = [
 
 export default function Pages() {
     return (
-        <Stack direction={'row'} spacing={5} sx={{ alignItems: 'center' }}>
+        <Stack direction={'row'} spacing={5} sx={{ alignItems: 'center',display:{xs:'none',md:'flex'} }}>
             {
                 pages.map((item) => {
                     return (

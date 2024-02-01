@@ -1,4 +1,4 @@
-import { Stack, Typography } from '@mui/material'
+import { Box, Stack, Typography } from '@mui/material'
 import React from 'react'
 import { ReactComponent as XyvinLogo } from '../../assets/logo.svg';
 
@@ -11,7 +11,12 @@ export default function Logo() {
                 textDecoration: 'none',
             }}
         >
-            <XyvinLogo style={{ height: 50, width: 70 }} />
+            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+                <XyvinLogo style={{ height: 50, width: 70 }} />
+            </Box>
+            <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+                <XyvinLogo style={{ height: 30, width: 50 }} />
+            </Box>
             <Typography
                 variant="h6"
                 noWrap
@@ -20,10 +25,10 @@ export default function Logo() {
                     mt: 0,
                     fontFamily: 'Michroma',
                     fontWeight: 400,
-                    fontSize: '20px',
+                    fontSize: { xs: '15px', md: '20px' },
                     lineHeightL: '35px',
                     color: '#fff',
-                    
+
                 }}
             >
                 Xyvin
