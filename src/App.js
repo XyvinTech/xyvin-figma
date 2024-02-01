@@ -9,7 +9,7 @@ import Counts from './components/counts';
 
 function App() {
   return (
-    <Box style=overflow: 'hidden' }}>
+    <Box style={{overflow: 'hidden' }}>
       <Navbar />
       <Header />
       <Service />
