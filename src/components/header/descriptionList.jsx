@@ -47,7 +47,7 @@ const DescriptionData = ({ data }) => {
 
 export default function DescriptionList({ ...props }) {
     return (
-        <Box sx={{ position: 'absolute', bottom: 0, width: '100%', height: '130px', backgroundColor: '#0004', backdropFilter: 'blur(10px)' }}>
+        <Box sx={{ position: 'absolute', bottom: 0, width: '100%', height: '130px', backgroundColor: '#0004', backdropFilter: 'blur(10px)',overflowX:'scroll' }}>
             <Stack direction={'row'} sx={{ px: 4, height: '100%' }}>
                 {
                     descriptionListData.map((item) => (

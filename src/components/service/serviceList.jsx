@@ -26,6 +26,7 @@ export default function ServiceList() {
                             fontSize: '14px', fontWeight: 550,
                             px: 2,
                             py: 1,
+                            cursor:'pointer',
                             width:'170px',
                             ":active": {
                                 background: "#000",
