@@ -8,6 +8,9 @@ import Partners from './components/partners';
 import Industries from './components/industries';
 import { useState } from 'react';
 import { useLayoutEffect } from 'react';
+import CaseStudies from './components/caseStudies';
+import Subscribe from './components/subscribe';
+import Footer from './components/footer';
 
 
 
@@ -35,6 +38,9 @@ function App() {
       <Counts />
       <Partners />
       <Industries />
+      <CaseStudies/>
+      <Subscribe/>
+      <Footer />
     </Box>
   );
 }

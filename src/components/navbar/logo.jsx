@@ -2,13 +2,14 @@ import { Box, Stack, Typography } from '@mui/material'
 import React from 'react'
 import { ReactComponent as XyvinLogo } from '../../assets/logo.svg';
 
-export default function Logo() {
+export default function Logo({variant="simple"}) {
     return (
         <Stack direction={'row'}
             component="a"
             href="#index"
             sx={{
                 textDecoration: 'none',
+                filter: variant=='invert' && 'invert()'
             }}
         >
             <Box sx={{ display: { xs: 'none', md: 'block' } }}>

@@ -7,7 +7,7 @@ const industryDetailData = [
   {
     title: 'Ed - tech',
     description: 'The purpose of this document is to outline the software requirements for the development of the Xyvin website. The website serves as a digital platform to showcase',
-    image: 'https://www.simplilearn.com/ice9/free_resources_article_thumb/Technology_Trends.jpg',
+    image: 'https://imgeng.jagran.com/images/2024/jan/EDtechPlatformsForSpecialKids1706598125494.jpg',
     url: ''
   },
   {
@@ -63,7 +63,10 @@ export default function Industries() {
   const [selectIndex, setSelectedindex] = useState(0)
   
   return (
-    <Box sx={{ width: '100%', position: 'absolute' }} >
+    <Box sx={{ width: '100%', position: 'relative' }} >
+      <Typography sx={{position:'absolute',top:2, right:10, color:'#fff7',fontSize:'70px',fontWeight:600,zIndex:2}}>
+        Industries
+      </Typography>
       <Stack direction={"row"} sx={{ zIndex: 0, overflowY: 'hidden', height: '400px' }}>
         {
           industryDetailData.map((item, ind) => (
@@ -71,13 +74,13 @@ export default function Industries() {
           ))
         }
       </Stack>
-      <Grid container sx={{ zIndex: 10, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', overflow: "hidden" }}>
+      <Grid container sx={{ zIndex: 1, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', overflow: "hidden" }}>
         {
           industryDetailData.map((item, ind) => (
             <IndustyDetail data={item} isActive={selectIndex === ind}
               onClick={() => {
                 setSelectedindex(ind)
-                document.getElementById(`image${ind}`).scrollIntoView({ behavior: 'smooth' })
+                document.getElementById(`image${ind}`).scrollIntoView({ behavior: 'smooth',block:'nearest',inline:'nearest' })
               }} />
           ))
         }
